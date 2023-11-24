@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/90fe504632.js" crossorigin="anonymous"></script>
+    <title>Your E-commerce Website</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="navmenu">
+            <ul class="navmenu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon hover">
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="login-icon hover">
+                <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="formPart">
+        <div class="tabs">
+            <button id="login-tab" class="active" onclick="showTab('login')">Login</button>
+            <button id="register-tab" onclick="showTab('register')">Register</button>
+        </div>
+
+        <div id="login-page" class="tab-content show form-box">
+            <!-- Login Form Content Goes Here -->
+            <h2 class="title">Login</h2>
+            <form>
+                <!-- Your login form fields go here -->
+                <input class="input-field" type="text" id="username" name="username" placeholder="Enter Email" required>
+
+                <input class="input-field" type="password" id="password" name="password" placeholder="Enter Password"
+                    required>
+
+            </form>
+            <button class="login-btn" type="submit">Login</button>
+        </div>
+
+        <div id="register-page" class="tab-content form-box">
+            <!-- Register Form Content Goes Here -->
+            <h2 class="title">Register</h2>
+            <form>
+                <!-- Your register form fields go here -->
+
+                <input class="input-field" type="text" id="new-username" name="username" placeholder="Enter Name"
+                    required>
+                <input class="input-field" type="email" id="new-username" name="username" placeholder="Enter Email"
+                    required>
+                <input class="input-field" type="password" id="new-password" name="password"
+                    placeholder="Enter Password" required>
+                <input class="input-field" type="password" id="new-password" name="password"
+                    placeholder="Re-type Password" required>
+
+            </form>
+            <button class="login-btn" type="submit">Register</button>
+        </div>
+    </section>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

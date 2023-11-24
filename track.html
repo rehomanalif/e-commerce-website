@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order</title>
+    <link rel="stylesheet" type="text/css" href="css/track.css">
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+
+            document.getElementById("clock").innerHTML = timeString;
+
+            setTimeout(updateClock, 1000);
+        }
+
+        // Run the function once to initialize the clock
+        window.onload = updateClock;
+    </script>
+</head>
+
+<body>
+
+    <form action="track_order.php" method="post">
+        <button><a href="index.html">Back To Home</a></button>
+        <div class="clock-container-items">
+            <h2>Track Your Order</h2>
+            <div id="clock-container">
+                <p>Current Time: <span id="clock"></span></p>
+            </div>
+        </div>
+
+
+        <label for="orderNumber">Order Number:</label>
+        <input type="text" id="orderNumber" name="orderNumber" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="submit" value="Track Order">
+    </form>
+
+</body>
+
+</html>

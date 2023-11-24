@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Report</title>
+    <link rel="stylesheet" href="css/bug.css">
+</head>
+
+<body>
+
+    <h2>Report a Bug</h2>
+    <button><a href="index.html">Back To Home</a></button>
+
+    <form action="submit_bug.php" method="post">
+        <!-- Your Information -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <!-- Bug Details -->
+        <label for="bugTitle">Bug Title/Summary:</label>
+        <input type="text" id="bugTitle" name="bugTitle" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="bugURL">URL where the bug occurred:</label>
+        <input type="url" id="bugURL" name="bugURL" required>
+
+        <label for="browser">Browser and Version:</label>
+        <input type="text" id="browser" name="browser" required>
+
+        <label for="os">Operating System:</label>
+        <input type="text" id="os" name="os" required>
+
+        <label for="screenshot">Screenshot/Video (if applicable):</label>
+        <input type="file" id="screenshot" name="screenshot">
+
+        <!-- Reproducibility -->
+        <label for="reproducibility">How often can the bug be reproduced?</label>
+        <select id="reproducibility" name="reproducibility" required>
+            <option value="always">Always</option>
+            <option value="sometimes">Sometimes</option>
+            <option value="rarely">Rarely</option>
+            <option value="unable">Unable to Reproduce</option>
+        </select>
+
+        <label for="reproduceSteps">Steps to Reproduce:</label>
+        <textarea id="reproduceSteps" name="reproduceSteps" rows="4" required></textarea>
+
+        <!-- Expected Behavior -->
+        <label for="expectedBehavior">Expected Behavior:</label>
+        <textarea id="expectedBehavior" name="expectedBehavior" rows="4" required></textarea>
+
+        <!-- Additional Information -->
+        <label for="additionalInfo">Additional Information:</label>
+        <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Bug Report">
+    </form>
+
+</body>
+
+</html>
