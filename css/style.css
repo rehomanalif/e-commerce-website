@@ -126,6 +126,7 @@ li{
 }
 .navmenu-list{
     display: flex;
+    align-items: center;
 }
 .navmenu-list li{
     margin-left: 30px;
@@ -651,3 +652,96 @@ img.payment {
     text-decoration: underline;
     color: green;
 }
+.mobile-nav{
+    display: none;
+}
+.nav-cart-icon {
+    display: flex;
+    align-items: center;
+}
+i#close{
+    display: none;
+}
+
+
+/* Responsive part */
+@media(max-width:799px){
+    .mobile-nav{
+        display: block;
+        font-size: 30px;
+        
+    }
+    
+    .navmenu-list.active{
+        right: 0;
+        
+    }
+    .navmenu-list{
+        transition: .5s;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background-color: rgb(171, 210, 172);
+        z-index: 1;
+        z-index: 1;
+        height: 90vh;
+        width: 200px;
+        background-color: rgb(171, 210, 172);
+        box-shadow: 0 40px 60px rgb(0, 0,0, 0.1);
+        padding: 0px 0px 0px 0px;
+        height: 360px;
+    }
+    .navmenu-list li{
+        margin-top: 10px;
+        background-color: rgb(197, 240, 205);
+        padding: 7px 17px;
+        width: 100%;
+        border-radius: 7px;
+        margin-right: 0;
+        display: flex;
+    }
+    .navmenu-list li:hover{
+        background-color: rgb(156, 210, 166);
+    }
+    .navmenu-list li a{
+        color: black;
+        font-weight: 600;
+    }
+    .nav-cart-icon {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        background: #0050ff21;
+        padding: 10px 20px 10px 0px;
+        border-radius: 10px;
+    }
+    /* .login-icon a:hover {
+        background: #f6edff;
+        padding: 10px 10px;
+        border-radius: 15px;
+    } */
+    .navmenu-list li:nth-child(1){
+        margin-top: 20px;
+    }
+
+    i#close {
+        display: block;
+        margin-top: 15px;
+        margin-right: 150px;
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+    
+
+
+
+}
+
+
+/* Responsive part ^ */
